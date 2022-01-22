@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+(
+    __import__("venvstarter")
+    .manager("pylama")
+    .add_pypi_deps("pylama==8.3.7")
+    .add_local_dep(
+        "{here}",
+        "..",
+        version_file=(
+            "pylama_dmypy",
+            "__init__.py",
+        ),
+        name="pylama-dmypy=={version}",
+    )
+    .run()
+)
