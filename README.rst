@@ -19,7 +19,7 @@ Changelog
 
 .. _release-0.2:
 
-0.2 - TBD
+0.2 - 27 January 2022
     * fixed the setup.py
 
 .. _release-0.1:
