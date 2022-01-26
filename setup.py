@@ -1,13 +1,13 @@
 from pylama_dmypy import VERSION
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # fmt: off
 
 setup(
       name = "pylama-dmypy"
     , version = VERSION
-    , py_modules = ['pylama_dmypy']
+    , packages = find_packages(include="pylama_dmypy.*", exclude=["tests*"])
 
     , extras_require =
       { 'tests':

@@ -17,6 +17,11 @@ Then configure your pylama to use the ``dmypy`` linter.
 Changelog
 ---------
 
+.. _release-0.2:
+
+0.2 - TBD
+    * fixed the setup.py
+
 .. _release-0.1:
 
 0.1 - 27 January 2022
