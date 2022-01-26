@@ -49,8 +49,8 @@ jobs:
           asset_name: ${{ steps.package.outputs.package }}
           asset_content_type: application/tar+gzip
 
-      - uses: pypa/gh-action-pypi-publish@v1.4.1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN_CORE }}
-          packages_dir: dist
+      # - uses: pypa/gh-action-pypi-publish@v1.4.1
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.PYPI_API_TOKEN_CORE }}
+      #     packages_dir: dist
