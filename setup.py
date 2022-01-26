@@ -16,6 +16,10 @@ setup(
         ]
       }
 
+    , entry_points =
+      { 'pylama.linter': ['dmypy = pylama_dmypy.linter:Linter']
+      }
+
     # metadata
     , url = "http://github.com/delfick/pylama-dmypy"
     , author = "Stephen Moore"
