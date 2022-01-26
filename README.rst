@@ -19,5 +19,5 @@ Changelog
 
 .. _release-0.1:
 
-0.1 - TBD
+0.1 - 27 January 2022
     * Creation
