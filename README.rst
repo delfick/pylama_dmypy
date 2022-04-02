@@ -17,6 +17,11 @@ Then configure your pylama to use the ``dmypy`` linter.
 Changelog
 ---------
 
+.. _release-0.3:
+
+0.3 - 2 April 2022
+    * Updated pylama and mypy
+
 .. _release-0.2:
 
 0.2 - 27 January 2022

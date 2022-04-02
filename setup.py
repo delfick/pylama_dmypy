@@ -11,8 +11,8 @@ setup(
 
     , extras_require =
       { 'tests':
-        [ "pylama==8.3.7"
-        , "mypy==0.931"
+        [ "pylama==8.3.8"
+        , "mypy==0.942"
         ]
       }
 
@@ -21,7 +21,7 @@ setup(
       }
 
     # metadata
-    , url = "http://github.com/delfick/pylama-dmypy"
+    , url = "http://github.com/delfick/pylama_dmypy"
     , author = "Stephen Moore"
     , author_email = "stephen@delfick.com"
     , description = "Linting plugin for pylama to see dmypy"
