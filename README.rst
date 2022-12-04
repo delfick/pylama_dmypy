@@ -17,6 +17,12 @@ Then configure your pylama to use the ``dmypy`` linter.
 Changelog
 ---------
 
+.. _release-0.4:
+
+0.4 - 4 December 2022
+    * Increase speed using a results cache. Now dmypy runs only once and each
+      file will get warnings/errors from that cached result
+
 .. _release-0.3:
 
 0.3 - 2 April 2022
