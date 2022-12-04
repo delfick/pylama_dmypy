@@ -5,6 +5,8 @@ exclude = '''
 /(
      \.git
    | dist
-   | tools
+   | tools/\.python
+   | build
+   | tools/\deps
 )/
 '''

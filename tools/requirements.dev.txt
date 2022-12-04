@@ -1,0 +1,5 @@
+types-setuptools==65.5.0.2
+pylama==8.4.1
+neovim==0.3.1
+python-language-server==0.36.2
+python-lsp-black==1.2.1

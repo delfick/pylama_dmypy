@@ -1,2 +1,4 @@
+deps
 .pylama
 .black
+.python
