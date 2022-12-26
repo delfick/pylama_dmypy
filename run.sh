@@ -13,24 +13,30 @@ while [ -h "$SCRIPT_PATH" ]; do
 done
 cd "$(dirname -- "$SCRIPT_PATH")" >'/dev/null'
 
-# Now we get to the script itself!
-HANDLED=0
-if [[ "$#" == "1" ]]; then
-    # Special case activate to make the virtualenv active in this session
-    if [[ "$1" == "activate" ]]; then
-        if [[ "$0" = "$BASH_SOURCE" ]]; then
-            echo "You need to run as 'source ./run.sh $1'"
-            exit 1
-        fi
-        VENVSTARTER_ONLY_MAKE_VENV=1 ./tools/venv
+# We use noseOfYeti here, so let's make black compatible with it
+export NOSE_OF_YETI_BLACK_COMPAT=true
+export NOSE_OF_YETI_IT_RETURN_TYPE=false
 
-        if [[ "$1" == "activate" ]]; then
-            source ./tools/.python/bin/activate
-            HANDLED=1
-        fi
+HANDLED=0
+
+# Special case activate to make the virtualenv active in this session
+if [[ "$0" != "$BASH_SOURCE" ]]; then
+    HANDLED=1
+    if [[ "activate" == "$1" ]]; then
+        VENVSTARTER_ONLY_MAKE_VENV=1 ./tools/venv
+        source ./tools/.python/bin/activate
+    else
+        echo "only say \`source run.sh activate\`"
     fi
 fi
 
 if [[ $HANDLED != 1 ]]; then
+    if [[ "$#" == "1" && "$1" == "activate" ]]; then
+        if [[ "$0" = "$BASH_SOURCE" ]]; then
+            echo "You need to run as 'source ./run.sh $1'"
+            exit 1
+        fi
+    fi
+
     exec ./tools/venv "$@"
 fi
