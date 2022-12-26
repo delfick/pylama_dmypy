@@ -10,3 +10,13 @@ exclude = '''
    | tools/\deps
 )/
 '''
+
+[tool.isort]
+profile = "black"
+skip_glob = [
+   ".git/*",
+   "dist/*",
+   "tools/.python/*",
+   "tools/deps/*",
+   "build/*",
+]
