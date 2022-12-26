@@ -1,12 +1,12 @@
-from pylama.lint import LinterV2 as Abstract
-from pylama.context import RunContext
-
+import os
+import re
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+
 from mypy import api
-import re
-import os
+from pylama.context import RunContext
+from pylama.lint import LinterV2 as Abstract
 
 regexes = {
     "dmypy_message": re.compile(

@@ -1,9 +1,9 @@
-from pathlib import Path
-import typing as tp
 import inspect
+import os
 import shlex
 import sys
-import os
+import typing as tp
+from pathlib import Path
 
 here = Path(__file__).parent
 
