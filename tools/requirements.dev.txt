@@ -1,7 +1,9 @@
-types-setuptools==65.5.0.2
+types-setuptools==69.1.0.20240309
 pylama==8.4.1
 neovim==0.3.1
-python-language-server==0.36.2
-python-lsp-black==1.2.1
+isort==5.13.2
+python-lsp-server==1.10.0
+python-lsp-pylama==0.1
 pyls-isort==0.2.2
-isort==5.11.4
+python-lsp-black==2.0.0
+mslex==1.1.0; sys.platform == 'win32'
